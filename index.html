@@ -10,44 +10,82 @@
 </head>
 <body>
     <nav>
+        <div class="toggle-nav" id="toggle-nav">
+            <span class="bar"></span>
+        </div>
+
         <ul>
-            <li> <a href="#home" onclick="activePage(this)" class="active">Home</a> </li>
-            <li> <a href="#portfolio" onclick="activePage(this)">Portfolio</a> </li>
-            <li> <a href="#" onclick="activePage(this)">Contact</a> </li>
-            <li> <a href="#" onclick="activePage(this)">About</a> </li>
+            <li> <a href="#home" onclick="activePage(this)" class="active">home</a> </li>
+            <li> <a href="#portfolio" onclick="activePage(this)">portfolio</a> </li>
+            <li> <a href="#contact" onclick="activePage(this)">contact</a> </li>
+            <li> <a href="#about" onclick="activePage(this)">about</a> </li>
         </ul>
     </nav>
 
+    <header class="profile" id="home">
+        <picture>
+            <source media="(min-width: 600px)"
+                srcset="https://wallpaperspit.com/wp-content/uploads/2017/11/Mountain-HD-Wallpapers-1080p.jpeg">
+            <img src="https://wallpaperspit.com/wp-content/uploads/2017/11/Mountain-HD-Wallpapers-1080p.jpeg">
+        </picture>
+
+        <div class="intro">
+            <span class="typed"></span>
+        </div>
+
+        <a href="#portfolio">
+            <h2>
+                Look at what I've Done Here<br>
+                <i class="fa fa-angle-double-down bounce"></i>
+            </h2>
+        </a>
+    </header>
     <main>
-        <section class="profile" id="home">
-            <picture>
-                <source media="(min-width: 600px)" srcset="https://wallpaperspit.com/wp-content/uploads/2017/11/Mountain-HD-Wallpapers-1080p.jpeg">
-                <img src="https://wallpaperspit.com/wp-content/uploads/2017/11/Mountain-HD-Wallpapers-1080p.jpeg">
-            </picture>
-
-            <div class="intro">
-                <span class="typed"></span>
-            </div>
-
-            <a href="#portfolio">
-                <h2>
-                    Look at what I've Done Here<br>
-                    <i class="fa fa-angle-double-down bounce"></i>
-                </h2>
-            </a>
-        </section>
 
         <section class="portfolio" id="portfolio">
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
+            <h1>Portfolio</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga accusantium saepe modi rerum facere quos quaerat architecto, reiciendis doloremque fugit rem, officia ab eaque! Corporis ipsum recusandae modi quos at?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga accusantium saepe modi rerum facere quos quaerat architecto, reiciendis doloremque fugit rem, officia ab eaque! Corporis ipsum recusandae modi quos at?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga accusantium saepe modi rerum facere quos quaerat architecto, reiciendis doloremque fugit rem, officia ab eaque! Corporis ipsum recusandae modi quos at?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga accusantium saepe modi rerum facere quos quaerat architecto, reiciendis doloremque fugit rem, officia ab eaque! Corporis ipsum recusandae modi quos at?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga accusantium saepe modi rerum facere quos quaerat architecto, reiciendis doloremque fugit rem, officia ab eaque! Corporis ipsum recusandae modi quos at?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga accusantium saepe modi rerum facere quos quaerat architecto, reiciendis doloremque fugit rem, officia ab eaque! Corporis ipsum recusandae modi quos at?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga accusantium saepe modi rerum facere quos quaerat architecto, reiciendis doloremque fugit rem, officia ab eaque! Corporis ipsum recusandae modi quos at?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga accusantium saepe modi rerum facere quos quaerat architecto, reiciendis doloremque fugit rem, officia ab eaque! Corporis ipsum recusandae modi quos at?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga accusantium saepe modi rerum facere quos quaerat architecto, reiciendis doloremque fugit rem, officia ab eaque! Corporis ipsum recusandae modi quos at?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga accusantium saepe modi rerum facere quos quaerat architecto, reiciendis doloremque fugit rem, officia ab eaque! Corporis ipsum recusandae modi quos at?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga accusantium saepe modi rerum facere quos quaerat architecto, reiciendis doloremque fugit rem, officia ab eaque! Corporis ipsum recusandae modi quos at?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga accusantium saepe modi rerum facere quos quaerat architecto, reiciendis doloremque fugit rem, officia ab eaque! Corporis ipsum recusandae modi quos at?</p>
+        </section>
+        <section class="contact" id="contact">
+            <h1>Contact</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi deserunt consectetur, iste maxime asperiores vero dolor ipsam, aut accusamus voluptatum suscipit veritatis! Quos quas autem eligendi amet. Modi, incidunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi deserunt consectetur, iste maxime asperiores vero dolor ipsam, aut accusamus voluptatum suscipit veritatis! Quos quas autem eligendi amet. Modi, incidunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi deserunt consectetur, iste maxime asperiores vero dolor ipsam, aut accusamus voluptatum suscipit veritatis! Quos quas autem eligendi amet. Modi, incidunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi deserunt consectetur, iste maxime asperiores vero dolor ipsam, aut accusamus voluptatum suscipit veritatis! Quos quas autem eligendi amet. Modi, incidunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi deserunt consectetur, iste maxime asperiores vero dolor ipsam, aut accusamus voluptatum suscipit veritatis! Quos quas autem eligendi amet. Modi, incidunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi deserunt consectetur, iste maxime asperiores vero dolor ipsam, aut accusamus voluptatum suscipit veritatis! Quos quas autem eligendi amet. Modi, incidunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi deserunt consectetur, iste maxime asperiores vero dolor ipsam, aut accusamus voluptatum suscipit veritatis! Quos quas autem eligendi amet. Modi, incidunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi deserunt consectetur, iste maxime asperiores vero dolor ipsam, aut accusamus voluptatum suscipit veritatis! Quos quas autem eligendi amet. Modi, incidunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi deserunt consectetur, iste maxime asperiores vero dolor ipsam, aut accusamus voluptatum suscipit veritatis! Quos quas autem eligendi amet. Modi, incidunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi deserunt consectetur, iste maxime asperiores vero dolor ipsam, aut accusamus voluptatum suscipit veritatis! Quos quas autem eligendi amet. Modi, incidunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi deserunt consectetur, iste maxime asperiores vero dolor ipsam, aut accusamus voluptatum suscipit veritatis! Quos quas autem eligendi amet. Modi, incidunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit excepturi deserunt consectetur, iste maxime asperiores vero dolor ipsam, aut accusamus voluptatum suscipit veritatis! Quos quas autem eligendi amet. Modi, incidunt.</p>
+        </section>
+        <section class="about" id="about">
+            <h1>About</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro illum iste quos, rem ratione obcaecati amet ducimus dignissimos et nisi voluptatibus a! Iusto distinctio suscipit maiores aut soluta laboriosam totam!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro illum iste quos, rem ratione obcaecati amet ducimus dignissimos et nisi voluptatibus a! Iusto distinctio suscipit maiores aut soluta laboriosam totam!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro illum iste quos, rem ratione obcaecati amet ducimus dignissimos et nisi voluptatibus a! Iusto distinctio suscipit maiores aut soluta laboriosam totam!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro illum iste quos, rem ratione obcaecati amet ducimus dignissimos et nisi voluptatibus a! Iusto distinctio suscipit maiores aut soluta laboriosam totam!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro illum iste quos, rem ratione obcaecati amet ducimus dignissimos et nisi voluptatibus a! Iusto distinctio suscipit maiores aut soluta laboriosam totam!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro illum iste quos, rem ratione obcaecati amet ducimus dignissimos et nisi voluptatibus a! Iusto distinctio suscipit maiores aut soluta laboriosam totam!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro illum iste quos, rem ratione obcaecati amet ducimus dignissimos et nisi voluptatibus a! Iusto distinctio suscipit maiores aut soluta laboriosam totam!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro illum iste quos, rem ratione obcaecati amet ducimus dignissimos et nisi voluptatibus a! Iusto distinctio suscipit maiores aut soluta laboriosam totam!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro illum iste quos, rem ratione obcaecati amet ducimus dignissimos et nisi voluptatibus a! Iusto distinctio suscipit maiores aut soluta laboriosam totam!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro illum iste quos, rem ratione obcaecati amet ducimus dignissimos et nisi voluptatibus a! Iusto distinctio suscipit maiores aut soluta laboriosam totam!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro illum iste quos, rem ratione obcaecati amet ducimus dignissimos et nisi voluptatibus a! Iusto distinctio suscipit maiores aut soluta laboriosam totam!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro illum iste quos, rem ratione obcaecati amet ducimus dignissimos et nisi voluptatibus a! Iusto distinctio suscipit maiores aut soluta laboriosam totam!</p>
         </section>
     </main>
 
@@ -55,12 +93,13 @@
 
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="style.js"></script>
+    <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script>
         function activePage(e) {
             $('nav a.active').removeClass('active');
             $(e).addClass('active');
+            $('#toggle-nav').click();
         }
     </script>
 </body>

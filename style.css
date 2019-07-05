@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:900&display=swap');
 
 body,
 * {
@@ -17,15 +17,19 @@ nav {
     transition: 1s;
     z-index: 1;
 }
+
 nav.black {
     background: rgba(0, 0, 0, 1);
+    transition: 1s;
 }
+
 nav.black ul li a {
     line-height: 50px;
 }
+
 nav ul {
     float: right;
-    width: 50%;
+    width: 40%;
     margin: 0;
     padding: 0;
     display: flex;
@@ -43,14 +47,19 @@ nav ul li a {
     padding: 5px 20px;
     text-decoration: none;
     text-transform: uppercase;
-    transition: .5s;
+    transition: 1s;
 }
 
 nav ul li a.active {
-    color: crimson;
+    color: #92e426;
 }
+
 nav ul li a:hover {
-    color: crimson;
+    color: #92e426;
+}
+
+nav.toggle-nav {
+    display: none;
 }
 
 .profile {
@@ -103,7 +112,8 @@ nav ul li a:hover {
     }
 }
 
-.portfolio {
+section {
+    padding: 50px 0;
     position: relative;
     width: 100%;
     max-width: 1080px;
@@ -114,5 +124,74 @@ nav ul li a:hover {
         height: 90vh;
         object-fit: cover;
         filter: brightness(50%);
+    }
+}
+
+@media (max-width: 768px) {
+    nav.blacked {
+        background: rgba(0, 0, 0, .9);
+        transition: 2s;
+        height: 100%;
+    }
+    nav ul li {
+        text-align: left;
+        transition: .5s;
+    }
+    nav ul li a {
+        line-height: 50px;
+    }
+    nav ul {
+        display: none;
+        width: 100%;
+    }
+    
+    nav ul.display {
+        display: inline-block;
+    }
+    .toggle-nav {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        margin: 10px;
+        float: right;
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 30px;
+        height: 3px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .5s;
+    }
+
+    .bar:before,
+    .bar:after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background: #fff;
+        transition: .5s;
+    }
+    .bar:before {
+        top: -10px;
+    }
+    .bar:after {
+        top: 10px;
+    }
+    .toggle-nav.open .bar {
+        background: rgba(0, 0, 0, 0);
+    }
+    .toggle-nav.open .bar:before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    .toggle-nav.open .bar:after {
+        top: 0;
+        transform: rotate(-135deg);
     }
 }
