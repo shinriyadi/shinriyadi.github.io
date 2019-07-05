@@ -1,7 +1,56 @@
-body, * {
-    font-family: "Gill Sans", sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+
+body,
+* {
+    font-family: "Montserrat", sans-serif;
     margin: 0 auto;
     width: 100%;
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    transition: 1s;
+    z-index: 1;
+}
+nav.black {
+    background: rgba(0, 0, 0, 1);
+}
+nav.black ul li a {
+    line-height: 50px;
+}
+nav ul {
+    float: right;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li a {
+    line-height: 80px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    padding: 5px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+nav ul li a.active {
+    color: crimson;
+}
+nav ul li a:hover {
+    color: crimson;
 }
 
 .profile {
@@ -20,14 +69,11 @@ body, * {
     top: 50%;
     transform: translateY(-50%);
     color: white;
+    font-size: 3vw;
+    font-weight: 600;
 }
 
-.intro a{
-    text-decoration: none;
-    color: white;
-}
-
-.profile h2{
+.profile h2 {
     position: absolute;
     bottom: 5%;
     font-size: 15px;
@@ -42,13 +88,28 @@ body, * {
     animation-name: bounce;
     animation-timing-function: linear;
 }
+
 @keyframes bounce {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(10px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
-@media (max-width: 500px){
+.portfolio {
+    position: relative;
+    width: 100%;
+    max-width: 1080px;
+}
+
+@media (max-width: 500px) {
     .profile img {
         height: 90vh;
         object-fit: cover;

@@ -9,40 +9,59 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 <body>
-    <header>
-
-    </header>
+    <nav>
+        <ul>
+            <li> <a href="#home" onclick="activePage(this)" class="active">Home</a> </li>
+            <li> <a href="#portfolio" onclick="activePage(this)">Portfolio</a> </li>
+            <li> <a href="#" onclick="activePage(this)">Contact</a> </li>
+            <li> <a href="#" onclick="activePage(this)">About</a> </li>
+        </ul>
+    </nav>
 
     <main>
-        <section class="profile">
+        <section class="profile" id="home">
             <picture>
                 <source media="(min-width: 600px)" srcset="https://wallpaperspit.com/wp-content/uploads/2017/11/Mountain-HD-Wallpapers-1080p.jpeg">
                 <img src="https://wallpaperspit.com/wp-content/uploads/2017/11/Mountain-HD-Wallpapers-1080p.jpeg">
             </picture>
+
             <div class="intro">
-                <h1>
-                    <a href="javascript:void(0)" class="typewrite" data-period="2000"
-                        data-type='[ "Hi, Im Muhshin Riyadi.", "I Love to Code.", "I Need Money.", "Give Me a Job." ]'>
-                        <span class="wrap"></span>
-                    </a>
-                </h1>
+                <span class="typed"></span>
             </div>
-            <a href="#">
+
+            <a href="#portfolio">
                 <h2>
-                    Look at My Work <br>
+                    Look at what I've Done Here<br>
                     <i class="fa fa-angle-double-down bounce"></i>
                 </h2>
             </a>
         </section>
 
-        <section class="portfolio">
-
+        <section class="portfolio" id="portfolio">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit numquam vel pariatur veniam, eum porro, quaerat aliquid ducimus rem aliquam vitae quia deserunt minus voluptatum consequatur eos qui placeat accusamus!</h1>
         </section>
     </main>
 
     <footer>
 
     </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="style.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script>
+        function activePage(e) {
+            $('nav a.active').removeClass('active');
+            $(e).addClass('active');
+        }
+    </script>
 </body>
-<script src="style.js"></script>
 </html>
