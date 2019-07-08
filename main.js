@@ -1,6 +1,6 @@
 $(document).ready(() => {
 
-    // $(this).scrollTop(0);
+    $(this).scrollTop(0);
 
     $('#toggle-nav').click(function () {
         $(this).toggleClass('open');
@@ -49,7 +49,7 @@ $(document).ready(() => {
             }
         });
 
-        $(".thumb-pf").each( function(){            
+        $(".thumbnail").each( function(){            
             var bottom_of_element = $(this).offset().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             
