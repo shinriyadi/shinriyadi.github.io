@@ -98,6 +98,57 @@ nav.toggle-nav {
     animation-timing-function: linear;
 }
 
+section h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio > div {
+    max-width: 300px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.thumb-pf {
+    position: relative;
+    opacity: 0;
+    margin: -25px 25px 25px 25px;
+}
+
+.thumb-pf figure img {
+	-webkit-filter: grayscale(0) blur(0);
+	filter: grayscale(0) blur(0);
+	-webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    object-fit: cover;
+    opacity: 1;
+}
+.thumb-pf figure {
+    background: #92e426;
+}
+.thumb-pf figure:hover img {
+	-webkit-filter: grayscale(100%) blur(3px);
+    filter: grayscale(100%) blur(2px);
+    cursor: pointer;
+    opacity: .2;
+}
+
+.thumb-pf figure .thumb-link {
+    display: none;
+}
+.thumb-pf figure:hover .thumb-link {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 @keyframes bounce {
     0% {
         transform: translateY(0);
@@ -193,5 +244,9 @@ section {
     .toggle-nav.open .bar:after {
         top: 0;
         transform: rotate(-135deg);
+    }
+    .portfolio > div {
+        max-width: 350px;
+        margin: 15px;
     }
 }

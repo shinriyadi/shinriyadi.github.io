@@ -1,6 +1,6 @@
 $(document).ready(() => {
 
-    $(this).scrollTop(0);
+    // $(this).scrollTop(0);
 
     $('#toggle-nav').click(function () {
         $(this).toggleClass('open');
@@ -29,14 +29,18 @@ $(document).ready(() => {
         $('nav').addClass('black');
     }
 
-    $(document).on("scroll", onScroll);
+    $(window).on("scroll", onScroll);
 
     function onScroll(event){
         var scrollPos = $(document).scrollTop();
+        var el = document.getElementById('portfolio');
+
         $('nav a').each(function () {
             var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
-            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            var refElement = currLink.attr("href").slice(1);
+            var getSection = document.getElementById(refElement);
+
+            if (getSection.getBoundingClientRect().top <= 250){
                 $('nav a').removeClass("active");
                 currLink.addClass("active");
             }
@@ -44,6 +48,16 @@ $(document).ready(() => {
                 currLink.removeClass("active");
             }
         });
-    }
-        
+
+        $(".thumb-pf").each( function(){            
+            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            if( bottom_of_window > bottom_of_element && window.matchMedia('(max-width: 768px)').matches){
+                $(this).animate({'opacity':'1', 'margin':'15px'},1000);
+            } else if( bottom_of_window > bottom_of_element && window.matchMedia('(min-width: 769px)').matches ){
+                $(this).animate({'opacity':'1', 'margin':'25px'},1000);
+            }
+        });
+    }  
 })
