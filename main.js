@@ -33,7 +33,7 @@ $(document).ready(() => {
 
     function onScroll(event){
         var scrollPos = $(document).scrollTop();
-        var el = document.getElementById('portfolio');
+        var el = document.getElementById('project');
 
         $('nav a').each(function () {
             var currLink = $(this);
@@ -55,9 +55,9 @@ $(document).ready(() => {
             
             if( bottom_of_window > bottom_of_element && window.matchMedia('(max-width: 768px)').matches){
                 $(this).animate({'opacity':'1', 'margin':'15px'},1000);
-            } else if( bottom_of_window > bottom_of_element && window.matchMedia('(min-width: 769px)').matches ){
+            } else if( bottom_of_window > (bottom_of_element-50) && window.matchMedia('(min-width: 769px)').matches ){
                 $(this).animate({'opacity':'1', 'margin':'25px'},1000);
             }
         });
     }  
-})
+});

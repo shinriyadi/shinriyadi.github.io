@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anaheim|Raleway|Tajawal&display=swap');
 
 body,
 * {
-    font-family: "Montserrat", sans-serif;
     margin: 0 auto;
     width: 100%;
     scroll-behavior: smooth;
 }
 
 nav {
+    font-family: "Raleway", sans-serif;
     position: fixed;
     top: 0;
     left: 0;
@@ -19,7 +19,7 @@ nav {
 }
 
 nav.black {
-    background: rgba(0, 0, 0, 1);
+    background: rgba(17, 20, 59, 1);    
     transition: 1s;
 }
 
@@ -42,8 +42,7 @@ nav ul li {
 
 nav ul li a {
     line-height: 80px;
-    font-family: 'Roboto', sans-serif;
-    color: white;
+    color: #F1F0FF;
     padding: 5px 20px;
     text-decoration: none;
     text-transform: uppercase;
@@ -51,11 +50,19 @@ nav ul li a {
 }
 
 nav ul li a.active {
-    color: #92e426;
+    color: #000;
+    background: #E82171;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
 }
 
 nav ul li a:hover {
-    color: #92e426;
+    color: #000;
+    background: #E82171;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
 }
 
 nav.toggle-nav {
@@ -65,6 +72,8 @@ nav.toggle-nav {
 .profile {
     position: relative;
     text-align: center;
+    height: 99.5vh;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
 }
 
 .profile img {
@@ -73,20 +82,30 @@ nav.toggle-nav {
     filter: brightness(50%);
 }
 
-.profile .intro {
+.profile .overlay-bg {
     position: absolute;
-    top: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(35, 0, 255, .3);
+}
+.profile .intro {
+    font-family: 'Anaheim', sans-serif !important;
+    position: absolute;
+    top: 40%;
     transform: translateY(-50%);
     color: white;
-    font-size: 3vw;
-    font-weight: 600;
+    font-size: 4vw;
+    font-weight: 700;
 }
 
 .profile h2 {
+    font-family: "Raleway", sans-serif;
     position: absolute;
-    bottom: 5%;
+    bottom: 3%;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 700;
     color: white;
 }
 
@@ -98,20 +117,27 @@ nav.toggle-nav {
     animation-timing-function: linear;
 }
 
+section {
+    font-family: "Tajawal", sans-serif;
+    padding: 50px 0;
+    position: relative;
+    width: 100%;
+}
+
 section h1 {
     text-align: center;
     text-transform: uppercase;
 }
 
-.portfolio {
+.project {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.portfolio>div {
-    max-width: 300px;
+.project>div {
+    max-width: 450px;
     text-align: center;
 }
 
@@ -123,15 +149,14 @@ section h1 {
 }
 
 .thumbnail img {
+    height: auto;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
     transition: .5s;
 }
 
 .thumbnail:hover .overlay {
     width: 100%;
-    opacity: .8;
+    opacity: .95;
 }
 
 .thumbnail:hover .overlay .source {
@@ -140,8 +165,8 @@ section h1 {
 }
 
 .thumbnail:hover img {
-    -webkit-filter: grayscale(100) blur(2px);
-    filter: grayscale(100) blur(2px);
+    -webkit-filter: grayscale(100);
+    filter: grayscale(100);
     -webkit-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
 }
@@ -150,11 +175,17 @@ section h1 {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: rgb(41, 202, 81);
+    background-color: #443266;
     overflow: hidden;
     width: 0;
     height: 100%;
     transition: .5s ease;
+}
+
+.overlay h2 {
+    top: 10%;
+    color: #fff;
+    position: absolute;
 }
 
 .overlay .source {
@@ -180,7 +211,13 @@ section h1 {
     font-size: 20px;
 }
 
+.source a:hover i {
+    color: #000;
+    font-size: 20px;
+}
+
 .source span {
+    margin-top: -15px;
     display: block;
     opacity: 0;
     transition: 1s;
@@ -188,11 +225,45 @@ section h1 {
 }
 
 .source a:hover span {
+    color: #000;
     margin-top: 10px;
     opacity: 1;
     transition: 1s;
 }
 
+.contact {
+    background: #ddd;
+}
+
+.contact-ls {
+    margin-top: 5%;
+    display: flex;
+    font-size: 50px;
+    justify-content: center;
+    color: #443266;
+}
+
+.brand-cl {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 20px;
+    background: #C3C3E5;
+    border: #8C489F 0px solid;
+    margin: 0 auto;
+    transition: 1s ease;
+}
+
+.brand-cl:hover {
+    background: #443266;
+    border: #f1f0ff 5px solid;
+    color: #C3C3E5;
+    padding: 15px;
+}
+
+.contact-ls i {
+    text-align: center;
+}
 
 @keyframes bounce {
     0% {
@@ -208,13 +279,6 @@ section h1 {
     }
 }
 
-section {
-    padding: 50px 0;
-    position: relative;
-    width: 100%;
-    max-width: 1080px;
-}
-
 @media (max-width: 500px) {
     .profile img {
         height: 100vh;
@@ -224,14 +288,16 @@ section {
 }
 
 @media (max-width: 768px) {
+    .profile {
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    }
     nav.blacked {
-        background: rgba(0, 0, 0, .9);
+        background: rgba(17, 20, 59, 0.9);
         transition: 2s;
         height: 100%;
     }
 
     nav ul li {
-        text-align: left;
         transition: .5s;
     }
 
@@ -246,6 +312,9 @@ section {
 
     nav ul.display {
         display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .toggle-nav {
@@ -287,7 +356,7 @@ section {
     }
 
     .toggle-nav.open .bar {
-        background: rgba(0, 0, 0, 0);
+        background: rgba(30, 40, 51, 0);
     }
 
     .toggle-nav.open .bar:before {
@@ -300,8 +369,13 @@ section {
         transform: rotate(-135deg);
     }
 
-    .portfolio>div {
+    .project>div:nth-child(even) {
         max-width: 350px;
-        margin: 15px;
+        margin: 15px -50px 15px 15px;
+    }
+
+    .project>div:nth-child(odd) {
+        max-width: 350px;
+        margin: 15px 15px 15px -50px;
     }
 }
