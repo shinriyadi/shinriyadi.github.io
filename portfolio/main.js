@@ -20,8 +20,10 @@ $(document).ready(() => {
     $(window).on('scroll', () => {
         if ($(window).scrollTop()) {
             $('nav').addClass('black');
+            $('.sticky-to-top').removeClass('block');
         } else {
             $('nav').removeClass('black');
+            $('.sticky-to-top').addClass('block');
         }
     })
 
