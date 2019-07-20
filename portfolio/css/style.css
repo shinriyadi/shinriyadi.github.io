@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Anaheim|Raleway&display=swap");
-body,
 * {
   margin: 0 auto;
+  padding: 0px;
   width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
@@ -453,6 +455,58 @@ section h1 {
     top: 0;
     -webkit-transform: rotate(-135deg);
             transform: rotate(-135deg);
+  }
+  .project {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .project .crs-container {
+    width: 100%;
+  }
+  .project .crs-container .carousel {
+    padding: 10px;
+    margin-top: 1rem;
+  }
+  .project .crs-container .carousel .crs-item {
+    display: inline-block !important;
+    padding: 0;
+  }
+  .project .crs-container .carousel .crs-item .crs-img {
+    max-width: 85%;
+    margin: 10px auto;
+    -webkit-filter: unset;
+            filter: unset;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.85);
+            box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.85);
+  }
+  .project .crs-container .carousel .crs-item .crs-text {
+    max-width: 95%;
+    margin: -5% auto 0 auto;
+    padding: 7% 20px 7% 20px;
+    font-size: 12px;
+  }
+  .project .crs-container .carousel .crs-item:hover .crs-overlay {
+    top: 0;
+    opacity: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+  }
+  .project .crs-container .carousel .crs-item:hover .crs-img {
+    -webkit-filter: unset;
+            filter: unset;
+    margin: 10px auto;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+  }
+  .project .crs-container .carousel .crs-item:hover .crs-text {
+    margin-left: 10px;
+    margin: -5% auto 0 auto;
+  }
+  .project .crs-container > .next, .project .crs-container > .prev {
+    opacity: .8;
   }
 }
 /*# sourceMappingURL=style.css.map */

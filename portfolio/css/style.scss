@@ -5,10 +5,11 @@ $putih: #EFE7E5;
 $birumuda: #3285B3;
 $hitam: rgba(17, 20, 59, 1);
 
-body,
 * {
     margin: 0 auto;
+    padding: 0px;
     width: 100%;
+    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
@@ -411,6 +412,64 @@ section {
                     top: 0;
                     transform: rotate(-135deg);
                 }
+            }
+        }
+    }
+
+    .project {
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        .crs-container {
+            width: 100%;
+
+            .carousel {
+                padding: 10px;
+                margin-top: 1rem;
+                .crs-item {
+                    display: inline-block !important;
+                    padding: 0;
+
+                    .crs-img {
+                        max-width: 85%;
+                        margin: 10px auto;
+                        filter: unset;
+                        box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.85);
+                    }
+        
+                    .crs-text {
+                        max-width: 95%;
+                        margin: -5% auto 0 auto;
+                        padding: 7% 20px 7% 20px;
+                        font-size: 12px;
+                    }
+
+                    &:hover {
+                        .crs-overlay {
+                            top: 0;
+                            opacity: 0;
+                            overflow: hidden;
+                            width: 100%;
+                            height: 0;
+                            transition: $transition;
+                        }
+
+                        .crs-img {
+                            filter: unset;
+                            margin: 10px auto;
+                            transition: $transition;
+                        }
+    
+                        .crs-text {
+                            margin-left: 10px;
+                            margin: -5% auto 0 auto;
+                        }
+                    }
+                }
+            }
+
+            &>.next, &>.prev {
+                opacity: .8;
             }
         }
     }
