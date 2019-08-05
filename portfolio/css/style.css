@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Anaheim|Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Yellowtail&display=swap");
 * {
   margin: 0 auto;
   padding: 0px;
@@ -12,11 +13,10 @@
   position: fixed;
   color: #EFE7E5;
   width: auto;
-  bottom: 10%;
-  right: 0;
+  bottom: 2%;
+  right: 1%;
   padding: 10px;
   background: rgba(17, 20, 59, 0.65);
-  border-radius: 7px 0 0 7px;
   font-weight: 900;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
@@ -42,10 +42,27 @@ nav {
   z-index: 1;
 }
 
+nav .logo {
+  font-family: 'Yellowtail', cursive;
+  color: #EFE7E5;
+  float: left;
+  width: auto;
+  padding: 20px;
+  font-size: 35px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  cursor: pointer;
+}
+
 nav.black {
   background: #11143b;
   -webkit-transition: 1s ease;
   transition: 1s ease;
+}
+
+nav.black .logo {
+  font-size: 20px;
+  padding: 10px 20px;
 }
 
 nav.black a {
@@ -190,6 +207,7 @@ section h1 {
 }
 
 .project {
+  height: 100vh;
   padding-top: 100px;
   position: relative;
   display: -webkit-box;
@@ -332,8 +350,76 @@ section h1 {
   right: 0;
 }
 
+.about {
+  width: 100%;
+  background: url("../image/silhouette.jpg") top;
+  height: 100vh;
+  position: relative;
+}
+
+.about .container {
+  position: absolute;
+  top: 45%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  color: #C3C3E5;
+}
+
+.about .container p {
+  width: 85%;
+}
+
+.about .container p b {
+  color: #3285B3;
+}
+
+.about .container .skill-set {
+  margin: 20px auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 75%;
+}
+
+.about .container .skill-set img {
+  width: 60px;
+  height: auto;
+  background: #EFE7E5;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .about .container .skill-set {
+    width: 90%;
+  }
+}
+
 .contact {
-  background: #ddd;
+  background: #EFE7E5;
+  height: 100vh;
+}
+
+.contact form {
+  margin-top: 20px;
+  width: 50%;
+}
+
+.contact form input {
+  padding: 5px;
+}
+
+.contact form .submit {
+  width: auto;
+  padding: 10px 20px;
+  float: right;
 }
 
 .contact .contact-ls {
@@ -387,6 +473,15 @@ section h1 {
     -webkit-transition: 1s ease;
     transition: 1s ease;
     height: 100%;
+  }
+  nav.blacked .logo {
+    font-size: 20px;
+    padding: 10px;
+  }
+  nav .logo {
+    position: absolute;
+    font-size: 20px;
+    padding: 10px;
   }
   nav ul {
     display: none;

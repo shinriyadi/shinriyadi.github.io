@@ -17,11 +17,10 @@ $hitam: rgba(17, 20, 59, 1);
     position: fixed;
     color: $putih;
     width: auto;
-    bottom: 10%;
-    right: 0;
+    bottom: 2%;
+    right: 1%;
     padding: 10px;
     background: rgba(17, 20, 59, 0.65);
-    border-radius: 7px 0 0 7px;
     font-weight: 900;
     transition: all $transition;
     text-decoration: none;
@@ -42,9 +41,26 @@ nav {
     transition: $transition;
     z-index: 1;
 
+    .logo {
+        @import url('https://fonts.googleapis.com/css?family=Yellowtail&display=swap');
+        font-family: 'Yellowtail', cursive;
+        color: $putih;
+        float: left;
+        width: auto;
+        padding: 20px;
+        font-size: 35px;
+        transition: $transition;
+        cursor: pointer;
+    }
+
     &.black {
         background: $hitam;
         transition: $transition;
+
+        .logo {
+            font-size: 20px;
+            padding: 10px 20px;
+        }
 
         a {
             line-height: 50px;
@@ -163,6 +179,7 @@ section {
 }
 
 .project {
+    height: 100vh;
     padding-top: 100px;
     position: relative;
     display: flex;
@@ -288,9 +305,70 @@ section {
     }
 }
 
-.contact {
-    background: #ddd;
+.about {
+    width: 100%;
+    background: url('../image/silhouette.jpg') top;
+    height: 100vh;
+    position: relative;
 
+    .container {
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        width: 100%;
+        color: #C3C3E5;
+
+        p {
+            width: 85%;   
+            b {
+                color: #3285B3;
+            }
+        }
+
+        .skill-set {
+            margin: 20px auto;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            width: 75%;
+
+            img {
+                width: 60px;
+                height: auto;
+                background: $putih;
+                padding: 5px;
+                border-radius: 50%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .skill-set {
+                width: 90%;
+            }
+        }
+
+    }
+}
+
+.contact {
+    background: $putih;
+    height: 100vh;
+
+    form {
+        margin-top: 20px;
+        width: 50%;
+
+        input {
+            padding: 5px;
+        }
+
+        .submit {
+            width: auto;
+            padding: 10px 20px;
+            float: right;
+        }
+    }
     .contact-ls {
         margin-top: 5%;
         display: flex;
@@ -338,6 +416,17 @@ section {
             background: $hitam;
             transition: $transition;
             height: 100%;
+
+            .logo {
+                font-size: 20px;
+                padding: 10px;
+            }
+        }
+
+        .logo {
+            position: absolute;
+            font-size: 20px;
+            padding: 10px;
         }
 
         ul {

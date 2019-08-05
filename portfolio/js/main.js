@@ -9,9 +9,9 @@ $(document).ready(() => {
     });
 
     var typed = new Typed(".typed", {
-        strings: ["Hello, I'm Muhshin Riyadi", "I'm Fullstack Web Developer"],
-        typeSpeed: 70,
-        startDelay: 50,
+        strings: ["Hello, I'm Muhshin Riyadi", "I'm Fullstack Web Developer", "I Love to Learn Programming", "Thankyou For Comming Here"],
+        typeSpeed: 100,
+        startDelay: 100,
         loop: true,
         backSpeed: 40,
         backDelay: 2000,
